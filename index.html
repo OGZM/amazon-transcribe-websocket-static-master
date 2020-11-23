@@ -101,11 +101,11 @@
 
 
                         var create = document.getElementById('create'),
-                            textbox = document.getElementById('textbox');
+                            transcript = document.getElementById('transcript');
 
                         create.addEventListener('click', function () {
                             var link = document.getElementById('downloadlink');
-                            link.href = makeTextFile(textbox.value);
+                            link.href = makeTextFile(transcript.value);
                             link.style.display = 'block';
                             document.getElementById('create').style.display = 'none';
                         }, false);
@@ -119,7 +119,7 @@
 
                 </script>
                 <script>
-                    document.getElementById("textbox").onchange = function ()
+                    document.getElementById("transcript").onchange = function ()
                 </script>
             </div>
             <div class="col">
