@@ -12,15 +12,14 @@
 <body>
     <div class="container">
         <h1>
-            Real-time Audio Transcription
+            Martixa AI Asistant
         </h1>
         <p class="small-caps">
-            Using the <a href="https://aws.amazon.com/transcribe/">Amazon Transcribe</a> WebSocket API
+            Using the Martixa WebSocket API
         </p>
         <hr/>
         <p>
-            Create an <a href="https://aws.amazon.com/free/">AWS Account</a>, attach the necessary <a
-                href="policy.json"> IAM policy</a>, and enter your Access Id and Secret Key below.
+            Enter your Martixa Access ID and Secret Key below:
         </p>
 
         <div id="error" class="isa_error"></div>
@@ -32,8 +31,7 @@
 
                 <label>Secret Key:</label>
                 <input type="password" id="secret_key" placeholder="SECRET KEY" value="" />
-                <label>Session Token (if using MFA):</label>
-                <input type="password" id="session_token" placeholder="SESSION TOKEN" value="" />
+                
             </div>
             <div class="col">
                 <label>Language: </label>
@@ -73,7 +71,7 @@
                 <button id="stop-button" class="button-xl" title="Stop Transcription" disabled="true">
                     <i class="fa fa-stop-circle"></i> Stop
                 </button>
-                <button id="reset-button" class="button-xl button-secondary" title="Clear Transcript">
+                <button id="reset-button" class="button-xl button-secondary" title="Clear Transcript">  
                     Clear Transcript
                 </button>
                 <button id="create">Create Text File</button> 
