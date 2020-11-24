@@ -1,19 +1,21 @@
 ﻿<!DOCTYPE html>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="dist/main.js"></script>
+
 <head>
     <meta charset="utf-8">
-    <title>Amazon Transcribe WebSocket API - Sample Application</title>
+    <title>Martixa AI Assistant</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
     <link rel="stylesheet" href="https://cdn.shoelace.style/1.0.0-beta24/shoelace.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 
-<body style="background-color:#39AD96;
-             background-image:linear-gradient(to bottom right, #39AD96, white);">
+<body style="background-color:#39AD96" ;>
     <div class="container">
         <h1 style="font-weight: bold">
-            Martixa AI Asistant
+            Martixa AI Assistant
             <div class="col">
                 <a class="float-right" href="https://martixa.com/us-en/" aria-label="Martixa Telemedicine">
                     <img id="logo" src="martixa_logo.png" alt="Martixa Logo" />
@@ -23,7 +25,7 @@
         <p class="small-caps" style="font-weight: bold">
             Using the Martixa WebSocket API
         </p>
-        <hr/>
+        <hr />
         <p>
             Please enter your Martixa Access ID and Secret Key below:
         </p>
@@ -65,10 +67,10 @@
                 </select>
 
             </div>
-            
+
         </div>
         <textarea id="transcript" placeholder="Press Start and speak into your mic" rows="5"
-            readonly="readonly"></textarea>
+                  readonly="readonly"></textarea>
         <div class="row">
             <div class="col">
                 <button id="start-button" class="button-xl" title="Start Transcription">
@@ -77,18 +79,16 @@
                 <button id="stop-button" class="button-xl" title="Stop Transcription" disabled="true">
                     <i class="fa fa-stop-circle"></i> Stop
                 </button>
-                <button id="reset-button" class="button-xl button-secondary" title="Clear Transcript">  
+                <button id="reset-button" class="button-xl button-secondary" title="Clear Transcript">
                     Clear Transcript
                 </button>
-                <button id="create">Create Text File</button> 
+                <button id="create">Create Text File</button>
                 <a download="file.txt" id="downloadlink" style="display: none">Download</a>
-                
+
             </div>
         </div>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="dist/main.js"></script>
 </body>
 
 </html>
