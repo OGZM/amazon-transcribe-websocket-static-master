@@ -1,15 +1,11 @@
 .container img {
     float: left;
-    width: 100px;
+    width: 110px;
     height: 100px;
     background: #39AD96;
 }
 
-.container h1 {
-    position: relative;
-    top: 18px;
-    left: 10px;
-}
+
 
 
 body {
