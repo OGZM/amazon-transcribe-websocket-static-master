@@ -1,3 +1,17 @@
+.container img {
+    float: left;
+    width: 200px;
+    height: 200px;
+    background: #39AD96;
+}
+
+.container h1 {
+    position: relative;
+    top: 18px;
+    left: 10px;
+}
+
+
 body {
     margin: 20px;
 }
