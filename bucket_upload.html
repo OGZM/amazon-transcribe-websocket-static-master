@@ -1,0 +1,18 @@
+<html>
+<head>
+    <!-- **DO THIS**: -->
+    <!--   Replace SDK_VERSION_NUMBER with the current SDK version number -->
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.799.0.min.js"></script>
+    <script src="./main.js"></script>
+    <script>
+       function getHtml(template) {
+          return template.join('\n');
+       }
+       listRecords();
+    </script>
+</head>
+<body>
+    <h1>Patient Records</h1>
+    <div id="app"></div>
+</body>
+</html>

@@ -9,6 +9,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
     <link rel="stylesheet" href="https://cdn.shoelace.style/1.0.0-beta24/shoelace.css">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-SDK_VERSION_NUMBER.js"></script>
+    <script src="./s3_photoExample.js"></script>
+    <script>
+        function getHtml(template) {
+            return template.join('\n');
+        }
+        listAlbums();
+    </script>
+
 </head>
 
 <body style="background-color:white" ;>
@@ -81,51 +90,54 @@
                     <button id="create">Create Text File</button>
                     <a download="file.txt" id="downloadlink" style="display: none">Download</a>
 
-                    <div>
-                        <div>
-                            <input type="file" id="fileUpload">
-                        </div>
-                        <div>
-                            <button margin:20px onclick="s3upload()">Submit</button>
-                        </div>
-                        <progress max=”100” value=”0”></progress>
+                    <button onclick="window.location.href='bucket_upload.html'">Upload a File</button>
 
-                        <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1.24.min.js"></script>
-                        <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-                        <script type="text/javascript">
-                            //Bucket Configurations
-                            var bucketName = medicaltext;
-                            var bucketRegion = us-east-1;
-                            var IdentityPoolId = us-east-1:f6ae3963-f4c5-40fa-b079-942f4117423c;
+                    <!--
+    <div>
+        <div>
+            <input type="file" id="fileUpload">
+        </div>
+        <div>
+            <button margin:20px onclick="s3upload()">Submit</button>
+        </div>
+        <progress max=”100” value=”0”></progress>
 
-                            AWS.config.update({
-                                region: bucketRegion,
-                                credentials: new AWS.CognitoIdentityCredentials({
-                                    IdentityPoolId: IdentityPoolId
-                                })
-                            });
+        <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1.24.min.js"></script>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript">
+            //Bucket Configurations
+            var bucketName = medicaltext;
+            var bucketRegion = us-east-1;
+            var IdentityPoolId = us-east-1:f6ae3963-f4c5-40fa-b079-942f4117423c;
 
-                            var s3 = new AWS.S3({
-                                apiVersion: '2006-03-01',
-                                params: { Bucket: bucketName }
-                            });
-                        </script>
-                    </div>
+            AWS.config.update({
+                region: bucketRegion,
+                credentials: new AWS.CognitoIdentityCredentials({
+                    IdentityPoolId: IdentityPoolId
+                })
+            });
 
+            var s3 = new AWS.S3({
+                apiVersion: '2006-03-01',
+                params: { Bucket: bucketName }
+            });
+        </script>
+    </div>
+    -->
+                </div>
+                </div>
+
+                <div class="col">
+                    <a class="float-right" href="https://martixa.com/us-en/" aria-label="Martixa Telemedicine">
+                        <img id="logo" src="martixa_logo.png" alt="Martixa Logo" style="vertical-align:middle;margin:50px 0px" />
+                    </a>
                 </div>
             </div>
 
-            <div class="col">
-                <a class="float-right" href="https://martixa.com/us-en/" aria-label="Martixa Telemedicine">
-                    <img id="logo" src="martixa_logo.png" alt="Martixa Logo" style="vertical-align:middle;margin:50px 0px" />
-                </a>
-            </div>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <script src="dist/main.js"></script>
         </div>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="dist/main.js"></script>
-    </div>
+    </body>
 
-</body>
-
-</html>
+    </html>
