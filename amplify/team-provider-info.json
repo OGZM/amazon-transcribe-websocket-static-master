@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-martixa-dev-190324-authRole",
+      "UnauthRoleArn": "arn:aws:iam::346665358400:role/amplify-martixa-dev-190324-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::346665358400:role/amplify-martixa-dev-190324-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-martixa-dev-190324-deployment",
+      "UnauthRoleName": "amplify-martixa-dev-190324-unauthRole",
+      "StackName": "amplify-martixa-dev-190324",
+      "StackId": "arn:aws:cloudformation:us-east-1:346665358400:stack/amplify-martixa-dev-190324/ed3f3e60-3684-11eb-84db-0a6d717c190d",
+      "AmplifyAppId": "d1xk83erbjcfvh"
+    },
+    "categories": {
+      "auth": {
+        "martixa47620e73": {}
+      }
+    }
+  }
+}
